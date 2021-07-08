@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="positiveLogout">Yes baby &#128520;</string>
+    <string name="negativeLogout">Nope baby  &#128522;</string>
+</resources>

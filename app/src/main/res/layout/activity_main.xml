@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/newRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_round"
+                android:text="new room"
+                android:drawableRight="@drawable/ic_baseline_add_box_24"
+                android:drawableTint="@color/white"
+                android:textColor="#fff" />
+
+            <LinearLayout
+                android:id="@+id/makeRoomLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/roomName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:ems="10"
+                    android:hint="Room Name"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/roomKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:ems="10"
+                    android:hint="RoomKey"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Create" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/joinRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_round"
+                android:text="join a room"
+                android:drawableRight="@drawable/ic_team"
+                android:drawableTint="@color/white"
+                android:drawableTintMode="src_in"
+                android:textColor="#fff" />
+
+            <LinearLayout
+                android:id="@+id/joinRoomLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/roomNameJoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:ems="10"
+                    android:hint="Room Name"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/roomKeyJoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:ems="10"
+                    android:hint="RoomKey"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Join" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/allRooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_round"
+                android:text="Your Rooms"
+                android:drawableRight="@drawable/ic_home"
+                android:drawableTint="@color/white"
+                android:textColor="#fff"
+
+                />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:drawableRight="@drawable/ic_logout"
+                android:drawableTint="@color/white"
+                android:text="Logout" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

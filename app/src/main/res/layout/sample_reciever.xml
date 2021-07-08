@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxWidth="280dp"
+    android:minWidth="100dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/btn_bg_round"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textSize="12sp"
+        android:id="@+id/recieverName"
+        android:textColor="@color/white"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hi my name is shashank kumar"
+        android:textSize="20sp"
+        android:maxWidth="280dp"
+        android:id="@+id/recieverMessage"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00"
+        android:layout_gravity="end"
+        android:id="@+id/recieverTime"
+        android:textColor="@color/white"
+        />
+
+</LinearLayout>

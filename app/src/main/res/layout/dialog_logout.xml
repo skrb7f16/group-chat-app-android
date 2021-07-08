@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/dialog_logout_bg"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do You want to clear all the data after logout?"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            >
+            <Button
+                android:id="@+id/logoutPositive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/positiveLogout"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_bg_round"
+                />
+            <Button
+                android:id="@+id/logoutNegative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/negativeLogout"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_bg_round"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
