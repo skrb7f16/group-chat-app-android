@@ -1,10 +1,13 @@
 package com.skrb7f16.chatapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -48,6 +51,10 @@ public class SigninActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signin);
         activitySigninBinding=ActivitySigninBinding.inflate(getLayoutInflater());
         setContentView(activitySigninBinding.getRoot());
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#03b1fc"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         firebaseAuth=FirebaseAuth.getInstance();
 
         database=FirebaseDatabase.getInstance("https://chatapp-104cb-default-rtdb.firebaseio.com/");

@@ -1,8 +1,11 @@
 package com.skrb7f16.chatapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,7 +20,12 @@ public class RoomCreatingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_creating);
         binding=ActivityRoomCreatingBinding.inflate(getLayoutInflater());
+
         setContentView(binding.getRoot());
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#03b1fc"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         Intent intent=getIntent();
         String roomname=intent.getStringExtra("roomname");
         String roomkey=intent.getStringExtra("roomkey");

@@ -4,64 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/white"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".RoomCreatingActivity">
 
     <TextView
+        android:id="@+id/usernameDisplay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="username"
-        android:id="@+id/usernameDisplay"
-        android:textSize="24sp"
         android:gravity="center"
+        android:text="username"
+        android:textSize="24sp"
 
         />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
         android:text="Share this code with other people to add them in your chatting room"
-        android:textSize="24sp"
         android:textColor="@color/purple_700"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        />
+        android:textSize="24sp" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Room name"
         android:id="@+id/roomname"
-        android:textSize="28sp"
-        android:gravity="center"
-        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        />
+        android:gravity="center"
+        android:text="Room name"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Room Key"
         android:id="@+id/roomkey"
-        android:textSize="28sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:gravity="center"
-        android:textStyle="bold"
-        android:layout_margin="10dp"
-        />
+        android:text="Room Key"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="share"
         android:id="@+id/share"
-        android:background="@drawable/btn_bg_round"
-        android:layout_margin="10dp"
-        android:textColor="#fff"
-        />
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="go to room"
-        android:id="@+id/goToRoom"
-        android:background="@drawable/btn_bg_round"
         android:layout_margin="10dp"
+        android:background="@drawable/btn_bg_round"
+        android:text="share"
         android:textColor="#fff"
-        />
+        app:backgroundTint="@color/blue_light" />
+
+    <Button
+        android:id="@+id/goToRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg_round"
+        android:text="go to room"
+        android:textColor="#fff"
+        app:backgroundTint="@color/blue_light" />
 </LinearLayout>

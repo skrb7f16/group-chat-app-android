@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".AllChatsActivity">
 
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="All your active rooms"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/blue_light"
         android:textSize="30sp" />
 
     <androidx.recyclerview.widget.RecyclerView

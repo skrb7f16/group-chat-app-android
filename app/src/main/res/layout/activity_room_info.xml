@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".RoomInfoActivity">
 
@@ -19,20 +20,26 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Group name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/createdOn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
             android:padding="10dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Memebers"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -53,6 +60,7 @@
             android:background="@color/design_default_color_error"
             android:text="Leave group"
             android:textColor="@color/white"
+            android:textColorHint="@color/black"
             app:backgroundTint="@color/design_default_color_error" />
     </LinearLayout>
 

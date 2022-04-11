@@ -2,11 +2,14 @@ package com.skrb7f16.chatapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
@@ -47,6 +50,10 @@ public class AllChatsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_all_chats);
         binding=ActivityAllChatsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#03b1fc"));
+        actionBar.setBackgroundDrawable(colorDrawable);
 
         allChatsAdapter=new AllChatsAdapter(chatTabs,AllChatsActivity.this);
         binding.AllChatsRecyclerView.setAdapter(allChatsAdapter);

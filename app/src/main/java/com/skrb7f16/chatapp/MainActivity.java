@@ -2,11 +2,13 @@ package com.skrb7f16.chatapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,12 +43,17 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser u;
     Users users;
     Rooms rooms;
+    int active=-1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#03b1fc"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         progressBar=new ProgressDialog(this);
         progressBar.setMessage("Checking ");
         progressBar.setTitle("Please wait.....");
@@ -74,11 +81,24 @@ public class MainActivity extends AppCompatActivity {
         binding.newRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(active==2){
+
+                    binding.joinRoomLinearLayout.setVisibility(View.GONE);
+                    active=0;
+                    join=!join;
+                    binding.joinRoom.setBackgroundColor(Color.parseColor("#03b1fc"));
+                }
                 if(!create) {
-                    binding.makeRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+//                    binding.makeRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+                    binding.makeRoomLinearLayout.setVisibility(View.VISIBLE);
+                    binding.newRoom.setBackgroundColor(Color.GREEN);
+                    active=1;
                 }
                 else{
-                    binding.makeRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+//                    binding.makeRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+                    binding.makeRoomLinearLayout.setVisibility(View.GONE);
+                    binding.newRoom.setBackgroundColor(Color.parseColor("#03b1fc"));
+                    active=0;
                 }
                 create=!create;
             }
@@ -86,11 +106,23 @@ public class MainActivity extends AppCompatActivity {
         binding.joinRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(active==1){
+                    binding.makeRoomLinearLayout.setVisibility(View.GONE);
+                    active=0;
+                    create=!create;
+                    binding.newRoom.setBackgroundColor(Color.parseColor("#03b1fc"));
+                }
                 if(!join) {
-                    binding.joinRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+//                    binding.joinRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+                    binding.joinRoomLinearLayout.setVisibility(View.VISIBLE);
+                    binding.joinRoom.setBackgroundColor(Color.GREEN);
+                    active=2;
                 }
                 else{
-                    binding.joinRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+//                    binding.joinRoomLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+                    binding.joinRoomLinearLayout.setVisibility(View.GONE);
+                    binding.joinRoom.setBackgroundColor(Color.parseColor("#03b1fc"));
+                    active=0;
                 }
                 join=!join;
 

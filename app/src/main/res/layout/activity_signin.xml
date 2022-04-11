@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/white"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".SigninActivity">
+
     <Button
         android:id="@+id/signin"
         android:layout_width="match_parent"
@@ -17,5 +19,6 @@
         android:padding="10dp"
         android:text="Sigin"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:backgroundTint="@color/blue_light" />
 </LinearLayout>

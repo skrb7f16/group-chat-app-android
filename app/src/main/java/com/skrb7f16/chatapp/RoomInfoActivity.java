@@ -2,10 +2,13 @@ package com.skrb7f16.chatapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -46,6 +49,10 @@ public class RoomInfoActivity extends AppCompatActivity {
 
         binding=ActivityRoomInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#03b1fc"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         progressbar=new ProgressDialog(this);
 
         progressbar.setMessage("Please Wait....");
@@ -103,7 +110,7 @@ public class RoomInfoActivity extends AppCompatActivity {
 
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, temp);
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, R.layout.mytextview, temp);
         binding.memberlist.setAdapter(adapter);
         binding.createdOn.setText("Created on: "+getTimeFromStamp(Long.parseLong(rooms.getCreated())));
         binding.groupName.setText(rooms.getRoomName());
